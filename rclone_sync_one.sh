@@ -1,11 +1,12 @@
 #!/bin/bash
 
 
-cloud_file=${cloud_file:-g:/d2023.md}
+file_name=${1:-d2023.md}
+cloud_file=${cloud_file:-g:/${file_name}}
 cloud_folder=${cloud_file%/*}
-local_file=${local_file:-/home/yhao24/d/d2023.md}
+local_file=${local_file:-/home/yhao24/d/${file_name}}
 shadow_folder=${shadow_folder:-/tmp/}
-shadow_file=${shadow_folder}/d2023.md
+shadow_file=${shadow_folder}/${file_name}
 
 
 rclone copy $cloud_file $shadow_folder
