@@ -1,6 +1,6 @@
 #!/bin/bash
 
-a7zversion="7z2400-linux-x64"
+a7zversion="7z2501-linux-x64"
 target_path=${target_path:-~/opt/7z}
 if [ ! -d "$target_path" ]; then
     mkdir -p "$target_path"
